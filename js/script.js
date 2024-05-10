@@ -17,6 +17,7 @@ fetch("../config.json").then(async (res) => {
     companyElement.classList.remove('company-empty')
     companyElement.innerText = info.company;
   }
+  aboutElement.innerText = info.about
   anchors.forEach((anchor) => {
     anchor.element.setAttribute("href", socials[`${anchor.name}`]);
   });
