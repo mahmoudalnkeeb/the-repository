@@ -41,31 +41,35 @@ ul {
   flex-wrap: wrap;
 }
 
+.job-title {
+  display: flex;
+  gap: 20px;
+  font-size: 1.3em;
+  align-items: center;
+}
+
 .role {
   color: #6c5ce7;
-  font-size: 1.3em;
   width: fit-content;
+}
+
+.company {
+  color: #202c38;
+  font-size: 1.2em;
   position: relative;
 }
-.role::before {
-  content: "@";
-  position: absolute;
-  right: -25px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: #6c5ce7;
-  vertical-align: baseline;
-}
-.role::after {
-  content: "";
-  position: absolute;
-  right: -27px;
-  top: 51%;
-  transform: translate(-50%, -50%);
-  background-color: #6c5ce7;
+
+.company-empty {
+  background-color: #202c38;
   width: 0.25rem;
   height: 2rem;
   animation: blink 1s infinite;
+}
+
+.company::before {
+  content: "@";
+  position: absolute;
+  left: -17px;
 }
 
 li a {
@@ -105,6 +109,6 @@ li i {
     background-color: transparent;
   }
   50% {
-    background-color: #6c5ce7;
+    background-color: #202c38;
   }
 }

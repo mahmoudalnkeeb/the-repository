@@ -60,8 +60,8 @@ class Cursor {
 
 const cursor = new Cursor(mouse.x, mouse.y);
 
-function animate() {
-  requestAnimationFrame(animate);
+function follow() {
+  requestAnimationFrame(follow);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   cursor.setTargetPosition(mouse.x, mouse.y);
@@ -69,4 +69,4 @@ function animate() {
   cursor.draw();
 }
 
-animate();
+follow();
